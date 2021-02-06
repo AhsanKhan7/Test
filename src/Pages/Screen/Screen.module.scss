@@ -1,0 +1,161 @@
+@media only screen and (min-width: 768px) {
+  // FOR DESKTOP AND TABLET
+  .dashboard_container {
+    width: 100%;
+    background-color: #dce1ec;
+    .dashboard_content_container {
+      width: 100%;
+      height: 100%;
+      padding: 15px 0;
+
+      .card {
+        position: relative;
+        width: 90.5%;
+        height: 100%;
+        margin-left: 120px;
+        padding-bottom: 20px;
+        background: #f8faff 0% 0% no-repeat padding-box;
+        border: 1px solid #e7eaf0;
+        border-radius: 5px;
+        opacity: 1;
+
+        .cardHeader {
+          margin-top: 20px;
+          display: flex;
+          justify-content: space-between;
+
+          .headerSection1 {
+            display: flex;
+            section {
+              margin-left: 15px;
+              button {
+                height: 40px;
+                width: 180px;
+                font-weight: 700;
+                color: white;
+                background-color: #94c03d;
+                border: none;
+                border-radius: 20px;
+              }
+            }
+            section:nth-child(2) {
+              margin-top: 7px;
+            }
+            section:nth-child(3) {
+              margin-left: 30px;
+              .searchIcon {
+                margin-top: 7px;
+                margin-left: 6px;
+                position: absolute;
+                color: #b4bdc6;
+              }
+              input {
+                height: 35px;
+                width: 120px;
+                background: #f8faff;
+                border: 1px solid #b4bdc6;
+                border-radius: 5px;
+                padding-left: 35px;
+              }
+              input::placeholder {
+                color: #b4bdc6;
+              }
+            }
+            section:nth-child(4) {
+              select {
+                height: 39px;
+                width: 120px;
+                background: #f8faff;
+                border: 1px solid #b4bdc6;
+                border-radius: 5px;
+              }
+            }
+          }
+          .headerSection2 {
+            display: flex;
+            section {
+              margin-right: 12px;
+            }
+          }
+        }
+        .cardHeader2 {
+          width: 100% !important;
+          height: 50px;
+          display: flex;
+          border-top: 1px solid lightgray;
+          border-bottom: 1px solid lightgray;
+          justify-content: space-around;
+          background-color: #ffffff;
+          margin-top: 20px;
+
+          section {
+            padding-top: 10px;
+          }
+          section:nth-child(1) {
+            display: flex;
+            width: 23%;
+            margin-top: 8px;
+            padding: 0 5px;
+            select {
+              width: 100px !important;
+              height: 30px;
+              border: 1px solid lightgray;
+              border-radius: 5px;
+              margin-right: 70px;
+              margin-top: -3px;
+            }
+            span:nth-child(3) {
+              margin: 0 5px;
+            }
+          }
+          section:nth-child(2) {
+            width: 60%;
+            border-left: 1px solid lightgray;
+            border-right: 1px solid lightgray;
+          }
+          section:nth-child(3) {
+            display: flex;
+            justify-content: space-between;
+            width: 20%;
+            margin-top: 15px;
+            padding: 0 10px;
+            button {
+              width: 120px;
+              height: 30px;
+              color: #d3e5b0;
+              font-weight: 700;
+              background-color: transparent;
+              border: none;
+              border: 2px solid #d3e5b0;
+              border-radius: 5px;
+              margin-top: -5px;
+            }
+            span {
+              color: #000;
+              font-weight: 600;
+            }
+          }
+        }
+        .cardItems {
+          display: flex;
+          width: 100%;
+
+          section {
+            padding: 0 10px;
+          }
+          section:nth-child(1) {
+            width: 23.3%;
+          }
+          section:nth-child(2) {
+            width: 60%;
+            border-left: 1px solid lightgray;
+            border-right: 1px solid lightgray;
+          }
+          section:nth-child(3) {
+            width: 20.6%;
+          }
+        }
+      }
+    }
+  }
+}

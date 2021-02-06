@@ -1,0 +1,57 @@
+@media only screen and (min-width: 768px) {
+  // FOR DESKTOP AND TABLET
+
+  .card {
+    height: 150px;
+    width: 95%;
+    background-color: #fff;
+    border-radius: 5px;
+
+    box-shadow: 2px 2px 2px #d0d9de;
+    margin-top: 20px;
+
+    .cardItem {
+      display: flex;
+      //   justify-content: space-around;
+      section:nth-child(1) {
+        margin-top: 10px;
+        img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+      section:nth-child(2) {
+        border: none !important;
+        margin-left: -10px;
+        margin-top: -10px;
+        h5 {
+          font-size: 12px;
+          font-weight: 700;
+        }
+        p {
+          margin-top: -15px;
+          font-size: 10px;
+          font-weight: 600;
+        }
+      }
+      section:nth-child(3) {
+        span {
+          margin-top: 15px;
+          margin-left: -25px !important;
+          position: absolute;
+          width: 80px !important;
+
+          font-size: 10px;
+        }
+      }
+    }
+    .cardText {
+      margin-top: -15px;
+      margin-bottom: -25px;
+      p {
+        padding: 0 10px;
+        word-wrap: break-word;
+      }
+    }
+  }
+}
