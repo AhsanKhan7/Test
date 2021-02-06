@@ -1,13 +1,15 @@
 import React from "react";
 import styles from "./Email.module.scss";
 
-import apple from "../../Assets/SideNav/apple.svg";
+import user from "../../Assets/SideNav/user.svg";
 import ReplyIcon from "@material-ui/icons/Reply";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
+import MoreVertIcon from "@material-ui/icons/MoreVert";
 
 const emailDetails = {
   emailTitle: "Checking in on design progress for AmeraShare",
   name: "Christopher Daly",
+  email: "Chris@amerashare.com",
   to: "Hamza javed",
   cc: "Freddy Knuth",
   time: "Tue 2/4/2021 8:43 PM",
@@ -19,14 +21,17 @@ const emailDetails = {
 const Email = () => {
   return (
     <div className={styles.email}>
-      <h4>{emailDetails.emailTitle}</h4>
+      <h5>{emailDetails.emailTitle}</h5>
 
       <div className={styles.emailDetails}>
         <section>
-          <img src={apple} alt="profilePic" />
+          <img src={user} alt="profilePic" />
         </section>
         <section>
-          <h6>{emailDetails.name}</h6>
+          <div className={styles.emailName}>
+            <h6>{emailDetails.name}</h6>
+            <h5>&lt;{emailDetails.email}&gt;</h5>
+          </div>
           <span>
             <strong>To:</strong>
             <p>{emailDetails.to}</p>
@@ -45,15 +50,29 @@ const Email = () => {
         <section>
           <ArrowForwardIcon />
         </section>
+        <section>
+          <MoreVertIcon />
+        </section>
       </div>
       <div className={styles.emailText}>
         <p>{emailDetails.emailText}</p>
         <span>Regards</span>
         <p>{emailDetails.regards}</p>
       </div>
+
       <div className={styles.emailEventButtons}>
-        <button>Reply</button>
-        <button>Forward</button>
+        <button>
+          <section>
+            <ReplyIcon />
+          </section>
+          <span>Reply</span>
+        </button>
+        <button>
+          <section>
+            <ArrowForwardIcon />
+          </section>
+          <span>Forward</span>
+        </button>
       </div>
 
       <hr />
