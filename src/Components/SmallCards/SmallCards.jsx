@@ -38,10 +38,10 @@ const SmallCards = () => {
         <Card className={styles.card}>
           <CardBody id={detail.id}>
             <div className={styles.cardItem}>
-              <section>
+              <section className={styles.cardImage}>
                 <img src={user} alt="profilePic" />
               </section>
-              <section>
+              <section className={styles.cardDetail}>
                 <h5>{detail.name}</h5>
                 <p>{detail.title}</p>
               </section>

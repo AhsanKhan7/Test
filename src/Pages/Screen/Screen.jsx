@@ -1,15 +1,22 @@
 import React from "react";
 import styles from "./Screen.module.scss";
-import AppNavbar from "../../Components/AppNavbar/AppNavbar";
+import { Card, CardBody } from "reactstrap";
 
+import AppNavbar from "../../Components/AppNavbar/AppNavbar";
 import SmallCards from "../../Components/SmallCards/SmallCards";
 import Email from "../../Components/Email/Email";
-
-import { Card, CardBody } from "reactstrap";
+import Folders from "../../Components/Folders/Folders";
 
 import ReplayIcon from "@material-ui/icons/Replay";
 import SearchIcon from "@material-ui/icons/Search";
 import FilterListIcon from "@material-ui/icons/FilterList";
+
+import StarIcon from "@material-ui/icons/Star";
+import DeleteIcon from "@material-ui/icons/Delete";
+import SaveAltIcon from "@material-ui/icons/SaveAlt";
+import CameraAltIcon from "@material-ui/icons/CameraAlt";
+import FolderOpenIcon from "@material-ui/icons/FolderOpen";
+import PrintIcon from "@material-ui/icons/Print";
 
 const Screen = () => {
   return (
@@ -27,7 +34,7 @@ const Screen = () => {
                       <button>+ CREATE MESSAGE</button>
                     </section>
                     <section>
-                      <ReplayIcon />
+                      <ReplayIcon className={styles.reply} />
                     </section>
                     <section>
                       <SearchIcon className={styles.searchIcon} />
@@ -54,6 +61,7 @@ const Screen = () => {
                     </section>
                   </div>
                 </div>
+
                 <div className={styles.cardHeader2}>
                   <section>
                     <section>
@@ -70,25 +78,54 @@ const Screen = () => {
                       <span>All</span>
                     </section>
                   </section>
-                  <section></section>
+                  <section className={styles.middleSection}>
+                    <div className={styles.middleSectionLeft}>
+                      <section className={styles.Icon1}>
+                        <StarIcon className={styles.IconActive} />
+                      </section>
+
+                      <section className={styles.Icon2}>
+                        <DeleteIcon className={styles.Icon} />
+                      </section>
+
+                      <section className={styles.Icon3}>
+                        <SaveAltIcon className={styles.Icon} />
+                      </section>
+
+                      <section className={styles.Icon4}>
+                        <CameraAltIcon className={styles.Icon} />
+                      </section>
+
+                      <section className={styles.Icon5}>
+                        <FolderOpenIcon className={styles.Icon} />
+                      </section>
+                    </div>
+                    <section className={styles.Icon6}>
+                      <PrintIcon className={styles.Icon} />
+                    </section>
+                  </section>
 
                   <section>
                     <div>
                       <span>Folders</span>
                     </div>
                     <div>
-                      <button>+ New Folder</button>
+                      <button>
+                        <p>+ New Folder</p>
+                      </button>
                     </div>
                   </section>
                 </div>
                 <div className={styles.cardItems}>
-                  <section>
+                  <section className={styles.smallCard}>
                     <SmallCards />
                   </section>
-                  <section>
+                  <section className={styles.emailCard}>
                     <Email />
                   </section>
-                  <section>Folders</section>
+                  <section className={styles.folderCard}>
+                    <Folders />
+                  </section>
                 </div>
               </>
             </CardBody>

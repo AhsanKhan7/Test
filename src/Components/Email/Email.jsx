@@ -27,33 +27,40 @@ const Email = () => {
         <section>
           <img src={user} alt="profilePic" />
         </section>
-        <section>
+
+        <div className={styles.emailTitles}>
           <div className={styles.emailName}>
             <h6>{emailDetails.name}</h6>
             <h5>&lt;{emailDetails.email}&gt;</h5>
           </div>
-          <span>
-            <strong>To:</strong>
-            <p>{emailDetails.to}</p>
-          </span>
-          <span>
-            <strong>Cc:</strong>
-            <p>{emailDetails.cc}</p>
-          </span>
-        </section>
-        <section>
+
+          <div className={styles.emailAddress}>
+            <span>
+              <strong>To:</strong>
+              <p>{emailDetails.to}</p>
+            </span>
+            <span>
+              <strong>Cc:</strong>
+              <p>{emailDetails.cc}</p>
+            </span>
+          </div>
+        </div>
+
+        <div className={styles.timeDate}>
           <p>{emailDetails.time}</p>
-        </section>
-        <section>
-          <ReplyIcon />
-        </section>
-        <section>
-          <ArrowForwardIcon />
-        </section>
-        <section>
-          <MoreVertIcon />
-        </section>
+        </div>
+
+        <div className={styles.replyIcon}>
+          <ReplyIcon className={styles.targetIcon} />
+        </div>
+        <div className={styles.forwardIcon}>
+          <ArrowForwardIcon className={styles.targetIcon} />
+        </div>
+        <div className={styles.vertIcon}>
+          <MoreVertIcon className={styles.targetIcon} />
+        </div>
       </div>
+
       <div className={styles.emailText}>
         <p>{emailDetails.emailText}</p>
         <span>Regards</span>
@@ -62,15 +69,11 @@ const Email = () => {
 
       <div className={styles.emailEventButtons}>
         <button>
-          <section>
-            <ReplyIcon />
-          </section>
+          <ReplyIcon className={styles.emailEventIcon} />
           <span>Reply</span>
         </button>
         <button>
-          <section>
-            <ArrowForwardIcon />
-          </section>
+          <ArrowForwardIcon className={styles.emailEventIcon} />
           <span>Forward</span>
         </button>
       </div>

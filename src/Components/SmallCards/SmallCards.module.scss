@@ -12,36 +12,49 @@
 
     .cardItem {
       display: flex;
-      //   justify-content: space-around;
-      section:nth-child(1) {
+      .cardImage {
         margin-top: 10px;
         img {
           width: 40px;
           height: 40px;
         }
       }
-      section:nth-child(2) {
+      .cardDetail {
         border: none !important;
         margin-left: -10px;
         margin-top: -10px;
         h5 {
-          font-size: 12px;
-          font-weight: 700;
+          margin-top: 17px;
+          width: 200px;
+          text-align: left;
+          font: normal normal bold 16px/26px Lato;
+          letter-spacing: 0.32px;
+          color: #404040;
+          opacity: 1;
         }
         p {
-          margin-top: -15px;
-          font-size: 10px;
-          font-weight: 600;
+          margin-top: -25px;
+
+          text-align: left;
+          font: normal normal normal 12px/20px Lato;
+          letter-spacing: 0.32px;
+          color: #404040;
+          opacity: 1;
         }
       }
       section:nth-child(3) {
         span {
           margin-top: 15px;
-          margin-left: -25px !important;
-          position: absolute;
-          width: 80px !important;
+          margin-left: -80px !important;
 
-          font-size: 10px;
+          position: absolute;
+
+          letter-spacing: 24;
+          text-align: left;
+          font: normal normal normal 12px/12px Lato;
+          letter-spacing: 0.24px;
+          color: #657683;
+          opacity: 1;
         }
       }
     }
@@ -51,6 +64,12 @@
       p {
         padding: 0 10px;
         word-wrap: break-word;
+
+        text-align: left;
+        font: normal normal normal 15px/23px Lato;
+        letter-spacing: 0.3px;
+        color: #657683;
+        opacity: 1;
       }
     }
   }

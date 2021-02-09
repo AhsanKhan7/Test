@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./app_nav.module.scss";
 import SideNav from "../SideNav/SideNav";
 
-import apple from "../../Assets/SideNav/apple.svg";
+import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 
 const AppNavbar = () => {
   return (
@@ -35,10 +35,13 @@ const AppNavbar = () => {
             </select>
           </section>
           <section className={styles.section4}>
-            <img src={apple} alt="icon" />
+            <h4>HM</h4>
           </section>
           <section className={styles.section5}>
             <h5>Chris Daly</h5>
+          </section>
+          <section className={styles.section6}>
+            <ArrowDropDownIcon className={styles.icon} />
           </section>
         </section>
       </div>
